@@ -1,0 +1,51 @@
+.word-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.word-text {
+    background-color: #f8f9fa;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    text-align: center;
+}
+
+.word-title {
+    color: #007bff;
+    margin-top: 10px;
+    text-transform: capitalize;
+}
+
+.word-audio {
+    margin-top: 20px;
+}
+
+.meaning {
+    margin-top: 20px;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+li {
+    background-color: #fff;
+    border-radius: 8px;
+    margin: 10px;
+    padding: 15px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease-in-out;
+}
+
+li:hover {
+    background-color: #e0e0e0;
+}
+
+.meaning-element {
+    font-weight: bold;
+    font-size: 16px;
+    margin: 0;
+}
