@@ -4,7 +4,7 @@ import Words from './Components/Words';
 function App() {
   return (
     <div className='main'>
-      <h1>Words Information</h1>
+      <h1 style={{fontFamily: 'sans-serif', color: 'firebrick', textTransform: 'uppercase'}}>Words Information</h1>
       <div className='quotes'>
         <Quotes/>
       </div>

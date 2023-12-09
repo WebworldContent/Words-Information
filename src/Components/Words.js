@@ -20,7 +20,6 @@ export default function Words() {
 
   if (!meaning) return <div>loading...</div>;
 
-  console.log(meaning?.meanings[0]?.definitions);
   const meanings = meaning?.meanings[0]?.definitions || [];
 
   return (

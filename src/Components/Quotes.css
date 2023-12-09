@@ -1,0 +1,28 @@
+/* Quotes.css */
+
+.quote-card {
+    width: 600px;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.card-content {
+    padding: 20px;
+    background-image: url('https://cdn.bhdw.net/im/beautiful-dark-forest-wallpaper-11525_w635.webp'); /* Replace with your image path */
+    background-size: cover;
+    color: #ffffff;
+    text-align: center;
+    height: 250px; /* Adjust the height as needed */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-weight: 800;
+}
+
+h2 {
+    margin: 0;
+    font-size: 1.5rem;
+    font-weight: bold;
+}

@@ -1,5 +1,6 @@
 import React from "react";
 import useSWR from 'swr';
+import './Quotes.css';
 
 const fetcher = url => fetch(url).then(res => res.json());
 
@@ -12,6 +13,12 @@ export default function Quotes() {
     if (isLoading) return <div>loading...</div>
 
     return (
-        data && <h2>{data.data}</h2>
+        data && (
+            <div className="quote-card">
+                <div className="card-content">
+                    <h2>{data.data}</h2>
+                </div>
+            </div>
+        )
     );
 };
