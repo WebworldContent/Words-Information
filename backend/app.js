@@ -8,7 +8,7 @@ app.use(express.json());
 app.use(express.urlencoded({extended: true}));
 app.use(cors({
     credentials:true,
-    origin: 'http://localhost:3000',
+    origin: 'https://words-information-front.vercel.app',
 }));
 
 app.get('/api/quotes', async (req, res, next) => {
