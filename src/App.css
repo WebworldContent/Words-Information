@@ -5,6 +5,11 @@
   align-items: center;
 }
 
+.main .logo {
+  width: 200px;
+  height: 200px;
+}
+
 .main .quotes {
   position: relative;
   padding: 20px;
@@ -19,4 +24,12 @@
 .main .word-meaning {
   padding: 20px;
   margin-top: 20px;
+}
+
+/* Media query for smaller screens (e.g., mobile devices) */
+@media only screen and (max-width: 600px) {
+  .main .logo {
+      width: 100px;
+      height: 100px;
+  }
 }

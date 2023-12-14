@@ -2,18 +2,20 @@
 
 .quote-card {
     width: 600px;
+    max-width: 100%; /* Make sure it doesn't exceed the screen width */
     border-radius: 10px;
     overflow: hidden;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 0 auto; /* Center the card horizontally */
 }
 
 .card-content {
     padding: 20px;
-    background-image: url('https://cdn.bhdw.net/im/beautiful-dark-forest-wallpaper-11525_w635.webp'); /* Replace with your image path */
+    background-image: url('https://cdn.bhdw.net/im/beautiful-dark-forest-wallpaper-11525_w635.webp');
     background-size: cover;
     color: #ffffff;
     text-align: center;
-    height: 250px; /* Adjust the height as needed */
+    height: 250px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -25,4 +27,14 @@ h2 {
     margin: 0;
     font-size: 1.5rem;
     font-weight: bold;
+}
+
+/* Media query for smaller screens (e.g., mobile devices) */
+@media only screen and (max-width: 600px) {
+    .quote-card {
+        width: 100%;
+    }
+    .card-content {
+        height: auto; /* Allow the height to adjust based on content */
+    }
 }

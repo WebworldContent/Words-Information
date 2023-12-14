@@ -1,10 +1,12 @@
 import './App.css';
 import Quotes from './Components/Quotes';
 import Words from './Components/Words';
+import logo from './assets/logo.png';
+ 
 function App() {
   return (
     <div className='main'>
-      <h1 style={{fontFamily: 'sans-serif', color: '#a0ff3e', textTransform: 'uppercase'}}>Words Information</h1>
+      <img className="logo" alt='word world' src={logo} />
       <div className='quotes'>
         <Quotes/>
       </div>
