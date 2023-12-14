@@ -6,11 +6,11 @@ const fetcher = (url) => fetch(url).then((res) => res.json());
 
 export default function Words() {
   const { data: word, error: errorInWord } = useSWR(
-    `http://localhost:${process.env.PORT}/api/word`,
+    `https://words-information.vercel.app/api/word`,
     fetcher
   );
   const { data: meaning, error: errorInMeaning } = useSWR(
-    () => `http://localhost:${process.env.PORT}/api/meaning/${word.word}`,
+    () => `https://words-information.vercel.app/api/meaning/${word.word}`,
     fetcher
   );
 
