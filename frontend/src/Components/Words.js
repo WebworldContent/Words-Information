@@ -6,11 +6,11 @@ const fetcher = (url) => fetch(url).then((res) => res.json());
 
 export default function Words() {
   const { data: word, error: errorInWord } = useSWR(
-    "http://localhost:3005/api/word",
+    `http://localhost:${process.env.PORT}/api/word`,
     fetcher
   );
   const { data: meaning, error: errorInMeaning } = useSWR(
-    () => `http://localhost:3005/api/meaning/${word.word}`,
+    () => `http://localhost:${process.env.PORT}/api/meaning/${word.word}`,
     fetcher
   );
 

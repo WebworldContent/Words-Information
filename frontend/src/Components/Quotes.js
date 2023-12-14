@@ -6,7 +6,7 @@ const fetcher = url => fetch(url).then(res => res.json());
 
 export default function Quotes() {
 
-    const {data, error, isLoading} = useSWR('http://localhost:3005/api/quotes', fetcher); 
+    const {data, error, isLoading} = useSWR(`http://localhost:${process.env.PORT}/api/quotes`, fetcher); 
 
     if (error) return <div>failed to load</div>
 
