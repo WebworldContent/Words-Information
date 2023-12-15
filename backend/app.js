@@ -6,8 +6,18 @@ const PORT = process.env.PORT || 3005;
 
 app.use(express.json());
 app.use(express.urlencoded({extended: true}));
-app.use(cors());
+app.use(cors({
+    credentials:true,
+    origin: 'https://words-information-front.vercel.app',
+}));
 
+app.use(function(req, res, next) {
+    res.header('Access-Control-Allow-Credentials', true);
+    res.header('Access-Control-Allow-Origin', req.headers.origin);
+    res.header('Access-Control-Allow-Methods', 'GET,PUT,POST,DELETE,UPDATE,OPTIONS');
+    res.header('Access-Control-Allow-Headers', '*');
+    next();
+});
 
 app.get('/api/quotes', async (req, res, next) => {
     try {
