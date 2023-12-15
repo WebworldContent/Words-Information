@@ -6,10 +6,7 @@ const PORT = process.env.PORT || 3005;
 
 app.use(express.json());
 app.use(express.urlencoded({extended: true}));
-app.use(cors({
-    credentials:true,
-    origin: 'https://words-information-front.vercel.app',
-}));
+app.use(cors());
 
 
 app.get('/api/quotes', async (req, res, next) => {
