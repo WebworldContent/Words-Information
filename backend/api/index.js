@@ -1,5 +1,5 @@
 import express from 'express';
-import cors from "cors"
+import cors from "cors";
 
 const app = express();
 const PORT = process.env.PORT || 3005;
@@ -63,7 +63,6 @@ app.get('/api/meaning/:word', async (req, res, next) => {
         res.sendStatus(500);
     }
 });
-
 
 
 app.listen(PORT, () => console.log(`Listening on port ${PORT}`));
