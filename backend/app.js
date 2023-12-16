@@ -7,8 +7,10 @@ const PORT = process.env.PORT || 3005;
 app.use(express.json());
 app.use(express.urlencoded({extended: true}));
 app.use(cors({
-    credentials:true,
-    origin: 'https://words-information-front.vercel.app',
+    origin: '*',
+    methods: '*',
+    allowedHeaders: ['Content-Type', 'Authorization'],
+    credentials: true,
 }));
 
 app.use(function(req, res, next) {
